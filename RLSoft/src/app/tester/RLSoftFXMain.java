@@ -6,6 +6,7 @@
 package app.tester;
 
 
+import app.dataAccess.InterfazDal;
 import java.net.URL;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -25,15 +26,27 @@ public class RLSoftFXMain extends Application {
    
    @Override
     public void start(Stage stage)throws Exception {
+        
+       /* try
+	  {
+	  	
+	  	InterfazDal.connectRLSoftDB();
+	  	//InterfazDAL.crearUsuario(unU);
+	  	InterfazDal.desconectar();
+	  		InterfazDal.desconectar();
+	  }catch(Exception e)
+	  {
+	  	System.out.println("Error: " + e.getMessage());
+	  } */
+        
       Parent root = FXMLLoader.load(getClass().getResource("LoginView.fxml"));
-       Scene scene = new Scene(root);
+      Scene scene = new Scene(root);
 
     stage.setScene(scene);
     stage.setTitle("RLSoft-Login v1.0");
     stage.setIconified(true);
     stage.setResizable(false);
-    stage.show();
-        
+    stage.show();        
         }
          
     
@@ -41,7 +54,12 @@ public class RLSoftFXMain extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
+	 
         launch(args);
+        
+        
     }
     
  }

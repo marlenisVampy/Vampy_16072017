@@ -20,7 +20,8 @@ import javafx.stage.Stage;
 public class LoginViewController implements Initializable {
  
 
-@FXML private void verifyUserData(ActionEvent e)throws Exception
+@FXML
+private void verifyUserData(ActionEvent e)throws Exception
     {
         
     }
