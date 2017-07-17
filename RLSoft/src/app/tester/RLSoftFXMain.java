@@ -26,8 +26,8 @@ public class RLSoftFXMain extends Application {
    
    @Override
     public void start(Stage stage)throws Exception {
-        
-       /* try
+     /*   
+       try
 	  {
 	  	
 	  	InterfazDal.connectRLSoftDB();
@@ -37,8 +37,8 @@ public class RLSoftFXMain extends Application {
 	  }catch(Exception e)
 	  {
 	  	System.out.println("Error: " + e.getMessage());
-	  } */
-        
+	  } 
+        */
       Parent root = FXMLLoader.load(getClass().getResource("LoginView.fxml"));
       Scene scene = new Scene(root);
 

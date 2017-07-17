@@ -42,7 +42,7 @@
          </effect>
       </Label>
       <Button id="btnOK" fx:id="btnOK" layoutX="243.0" layoutY="285.0" mnemonicParsing="false" onAction="#verifyUserData" styleClass="button_app" text="Iniciar sesión" />
-      <Label id="txtMsgError" fx:id="txtMsgError" layoutX="221.0" layoutY="329.0" styleClass="texterr_app" text="Los datos son incorrectos" />
+      <Label id="txtMsgError" fx:id="txtMsgError" layoutX="221.0" layoutY="329.0" styleClass="texterr_app"  />
       <Label layoutX="386.0" layoutY="366.0" styleClass="textnp_app" text="¿No puede acceder a su cuenta?" />
    </children>
    <opaqueInsets>

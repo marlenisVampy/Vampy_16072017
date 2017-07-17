@@ -6,12 +6,17 @@
 package app.dataAccess;
 
 import static java.lang.Class.forName;
+import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import app.model.*;
+
+import app.model.controller.*;
+//import static app.model.controller.LoginViewController.txtMsgError;
 
 /**
  *
@@ -31,7 +36,7 @@ public class InterfazDal {
 
             try {
                     Class.forName("org.sqlite.JDBC");
-                   connection = DriverManager.getConnection("jdbc:sqlite:RLSoftDB.sqlite");
+ connection = DriverManager.getConnection("jdbc:sqlite:C:\\Users\\PC\\Desktop\\PruebaGit\\Vampy_16072017\\RLSoft\\src\\resources\\DataBase\\RLSoftDB.sqlite");
                  //No funciona Class.forName("org.apache.derby.jdbc.ClientDriver");
                   //DriverManager.registerDriver(new org.apache.derby.jdbc.ClientDriver());
                   //connection = DriverManager.getConnection(url);
@@ -114,6 +119,47 @@ public class InterfazDal {
         
         return id;
     } //fin método executeQueryGeneratedKeys()
+}
    
     //ejecutar Insert
-}
+   //-----------------------------------------------------------------------
+   /* public static Usuario leerUnUsuario(String nombreUsuario,String passWord)
+   {
+      Usuario usr = null; 
+
+      try{
+            
+            ResultSet result; 
+            Object[] parametros;       
+
+            String selection = "SELECT userName,userPass"+
+                               "FROM USUARIO" +
+                               "WHERE userName = ? AND userPass = ?";
+
+            parametros = new Object[]{nombreUsuario,passWord};
+            
+              
+
+            InterfazDal.connectRLSoftDB();
+            result = InterfazDal.ejecutarQuery(selection,parametros);
+
+            if(result.next())
+            {  
+                               
+                String noUsuario = result.getString("NombreUser");
+                String passUsuario = result.getString("Pass");
+                usr = new Usuario(noUsuario,passUsuario);   
+                txtMsgError.setText("Login exitoso");
+             }else
+                 txtMsgError.setText("Los datos son incorrectos");              
+
+
+         }catch(Exception error)
+         {
+            System.out.println("Error: " + error.getMessage());
+         }finally
+                {
+                  return usr;
+               }
+   }//fin de leerUnUsuario()*/
+
